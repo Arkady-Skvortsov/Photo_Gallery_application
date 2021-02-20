@@ -1,0 +1,137 @@
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  40% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes happyLoad {
+  0% {
+    width: 65px;
+  }
+
+  25% {
+    width: 130px;
+  }
+
+  50% {
+    width: 195px;
+  }
+
+  75% {
+    width: 260px;
+  }
+
+  100% {
+    width: 325px;
+  }
+}
+
+@keyframes Continue {
+  0% {
+    opacity: 0.4;
+  }
+
+  15% {
+    opacity: 0.2;
+  }
+
+  25% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes message {
+  0% {
+    transform: scale(0.2);
+  }
+
+  25% {
+    transform: scale(0.4);
+  }
+
+  50% {
+    transform: scale(0.6);
+  }
+
+  75% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0px);
+  }
+
+  15% {
+    transform: translateY(5px);
+  }
+
+  25% {
+    transform: translateY(10px);
+  }
+
+  35% {
+    transform: translateY(5px);
+  }
+
+  45% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+
+  85% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
