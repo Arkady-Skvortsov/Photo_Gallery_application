@@ -1,0 +1,29 @@
+@import "../../styles.scss";
+
+.card-block {
+  max-width: 900px;
+  height: 700px;
+  background: $b;
+  margin: 35px auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s;
+  border: 1px solid $w;
+  -o-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -webkit-transition: 0.8s;
+
+  &:hover {
+    box-shadow: 0 0 20px $w;
+  }
+
+  .card-txt-block {
+    .card-txt {
+      color: $w;
+      font-size: 25px;
+      font-family: $Merri;
+    }
+  }
+}
