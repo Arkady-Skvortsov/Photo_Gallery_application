@@ -26,5 +26,17 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "jokes-chack",
+      "urls": ["http://api.icndb.com/jokes/random"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "2h",
+        "maxSize": 15,
+        "timeout": "5s"
+      }
+    }
   ]
 }

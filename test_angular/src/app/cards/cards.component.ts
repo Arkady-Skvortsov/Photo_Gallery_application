@@ -15,7 +15,7 @@ export class CardsComponent implements OnInit {
   constructor(private data: DataService) {}
 
   ngOnInit() {
-    this.data.Render(this.index).subscribe((data) => {
+    this.data.Render().subscribe((data) => {
       this.dota = data;
     });
   }

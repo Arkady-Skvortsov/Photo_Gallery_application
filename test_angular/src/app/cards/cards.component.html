@@ -1,5 +1,12 @@
 <div class="card-block">
-  <div class="card-txt-block">
-    <span class="card-txt">{{ dota.value.joke }}</span>
+  <div *ngIf="dota !== null; else elseBlock">
+    <img class="card-image-block" [src]="dota.image" alt="Random Foxy))" />
   </div>
+  <ng-template #elseBlock>
+    <img
+      src="../../assets/images/lisa.jpg"
+      alt="Usually Foxy"
+      class="card-image-block"
+    />
+  </ng-template>
 </div>

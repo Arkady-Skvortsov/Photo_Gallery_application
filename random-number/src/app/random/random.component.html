@@ -1,0 +1,34 @@
+<div class="random-main-block">
+  <div
+    class="previous-page"
+    [@Arrow]="AnimationArr"
+    (click)="[Navigate(), Animation()]"
+  >
+    <fa-icon class="previous-angle" [icon]="angle"></fa-icon>
+  </div>
+
+  <!-- [@Arrow] === <transition name="Arrow"></transition> -->
+
+  <div class="number-main-block">
+    <div class="number-child-block">
+      <div class="input-number-block num-blocks">
+        <div class="title">Отгаданное</div>
+
+        <div
+          class="input-number number"
+          [style]="{ color: numCheck === false ? 'red' : 'green' }"
+        >
+          {{ otgadannoe$ | async }}
+        </div>
+      </div>
+
+      <div class="question-number-block num-blocks">
+        <div class="title">Загаданное</div>
+
+        <div class="question-number number">{{ zagadannoe$ | async }}</div>
+      </div>
+    </div>
+
+    <button class="button-versus-block" (click)="Versus()">Убедиться</button>
+  </div>
+</div>

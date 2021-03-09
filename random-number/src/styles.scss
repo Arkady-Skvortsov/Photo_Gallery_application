@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"); //"Comfortaa", cursive));
+
+$Comfortaa: "Comfortaa", cursive;
+$b: black;
+$g: green;
+$r: red;
+$w: white;
+$fontF: 35px;
+$fontS: 45px;
+$fontT: 55px;
+
+//ANIMATIONS
+@keyframes clearTxt {
+  0% {
+    opacity: 0.8;
+  }
+
+  25% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  75% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes getAnswers {
+  0% {
+    transform: scale(0.8);
+  }
+
+  25% {
+    transform: scale(0.6);
+  }
+
+  50% {
+    transform: scale(0.4);
+  }
+
+  75% {
+    transform: scale(0.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+//MIXINS
+@mixin transition($t) {
+  transition: $t;
+  -o-transition: $t;
+  -moz-transition: $t;
+  -webkit-transition: $t;
+}
+
+@mixin buttons($h, $w, $b-radius, $color) {
+  height: $h;
+  width: $w;
+  border-radius: $b-radius;
+  background: $color;
+  @include transition(0.8s);
+  cursor: pointer;
+}
+
+@mixin display($j, $a) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+}

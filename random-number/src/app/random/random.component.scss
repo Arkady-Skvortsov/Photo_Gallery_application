@@ -1,0 +1,86 @@
+@import "../../styles.scss";
+
+.random-main-block {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  .previous-page {
+    @include buttons(75px, 75px, 45px, $b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+
+    &:hover {
+      transform: translateX(-25px);
+    }
+
+    .previous-angle {
+      font-size: 45px;
+      color: $w;
+    }
+  }
+
+  .number-main-block {
+    margin: 0px auto;
+    max-width: 800px;
+    height: 500px;
+    background: $b;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    .number-child-block {
+      margin: 0;
+      display: inline-flex;
+
+      .input-number-block {
+        border-right: 1px solid $w;
+      }
+
+      .question-number-block {
+        border-left: 1px solid $w;
+      }
+
+      .num-blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 500px;
+        width: 400px;
+
+        .title {
+          font-size: 40px;
+          color: $w;
+          font-family: $Comfortaa;
+        }
+
+        .number {
+          font-size: 70px;
+          color: $w;
+          font-family: $Comfortaa;
+        }
+      }
+    }
+
+    .button-versus-block {
+      @include buttons(75px, 550px, 0, $b);
+      color: $w;
+      font-size: 55px;
+      font-family: $Comfortaa;
+      text-align: center;
+      border: 0;
+      margin: 25px 125px;
+
+      &:hover {
+        box-shadow: 0 0 20px $b;
+      }
+
+      &:active {
+        border: 1px solid $w;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../styles.scss";
+
+.question-main-block {
+  max-width: 385px;
+  margin: 0 auto;
+  height: 355px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .question-block {
+    @include buttons(100px, 100px, 50px, $b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      transform: scale(0.9);
+      box-shadow: 0 0 20px $b;
+    }
+
+    .quest {
+      color: $w;
+      font-size: 50px;
+
+      animation: quest 2s linear infinite;
+    }
+  }
+
+  .question-options-block {
+    .question-inputs-block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .input-blocks {
+        input {
+          border: 0;
+          background: $b;
+          width: 145px;
+          height: 45px;
+          font-size: 20px;
+          color: $w;
+          font-family: $Comfortaa;
+        }
+      }
+
+      .close-block {
+        @include buttons(50px, 50px, 0px, $r);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .close {
+          font-size: 25px;
+          color: $w;
+        }
+      }
+    }
+
+    .question-params {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .reg-blocks {
+        span {
+          font-size: 35px;
+          font-family: $Comfortaa;
+        }
+      }
+    }
+  }
+}

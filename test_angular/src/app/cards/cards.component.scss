@@ -19,11 +19,15 @@
     box-shadow: 0 0 20px $w;
   }
 
-  .card-txt-block {
-    .card-txt {
-      color: $w;
-      font-size: 25px;
-      font-family: $Merri;
-    }
+  .card-image-block {
+    height: 700px;
+    max-width: 900px;
+    border-radius: 20px;
+  }
+
+  .card-txt {
+    font-size: 45px;
+    color: $w;
+    font-family: $Merri;
   }
 }

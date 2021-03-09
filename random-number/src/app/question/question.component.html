@@ -1,0 +1,38 @@
+<div class="question-main-block">
+  <div class="question-block" (click)="Question()">
+    <fa-icon class="quest" @Question [icon]="question"></fa-icon>
+  </div>
+  <div class="question-options-block">
+    <div class="question-inputs-block">
+      <div class="input-min-block input-blocks">
+        <input
+          placeholder="Min property"
+          type="number"
+          class="min"
+          name="min"
+          #minInput
+        />
+      </div>
+      <div class="close-block" (click)="Clear()">
+        <fa-icon class="close" [icon]="close"></fa-icon>
+      </div>
+      <div class="input-max-block input-blocks">
+        <input
+          placeholder="Max property"
+          type="number"
+          class="max"
+          name="max"
+          #maxInput
+        />
+      </div>
+    </div>
+    <div class="question-params">
+      <div class="min-block reg-blocks">
+        <span>min</span>
+      </div>
+      <div class="max-block reg-blocks">
+        <span>max</span>
+      </div>
+    </div>
+  </div>
+</div>

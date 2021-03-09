@@ -23,16 +23,18 @@ export class AppComponent {
     //Когда приложение было обновлено до новой версии)
     this.updates.activated.subscribe((e) =>
       console.log(
-        `предыдущая версия - ${e.previous}`,
-        `текщая версия - ${e.current}`
+        `предыдущая версия - ${JSON.stringify(e.previous)}`,
+        `текщая версия - ${JSON.stringify(e.current)}`
       )
     );
 
     this.appRef.isStable.subscribe((isStable) => {
       if (isStable) {
-        this.updates.checkForUpdate().then(() => {
-          console.log('Checked for Updated!!');
-        });
+        setInterval(() => {
+          this.updates.checkForUpdate().then(() => {
+            console.log('Checked for Updated!!');
+          });
+        }, 300000);
       }
     });
   }

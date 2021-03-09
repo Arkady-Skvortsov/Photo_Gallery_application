@@ -1,0 +1,15 @@
+@import "../../styles.scss";
+
+.notification-main-block {
+  @include buttons(90px, 550px, 0, $r);
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+
+  .txt {
+    font-size: 30px;
+    font-family: $Comfortaa;
+    color: $w;
+  }
+}

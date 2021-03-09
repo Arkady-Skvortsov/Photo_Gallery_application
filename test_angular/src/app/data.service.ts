@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
   constructor(private http: HttpClient) {}
 
-  Render(id: number) {
+  Render() {
     //Adventure time AP
-    return this.http.get(`http://api.icndb.com/jokes/${id}`);
+    return this.http.get(`https://randomfox.ca/floof/`);
   }
 }
