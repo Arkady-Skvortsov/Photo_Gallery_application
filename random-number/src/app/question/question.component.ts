@@ -1,14 +1,10 @@
 import { ViewChild, Component, OnInit, ElementRef } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { QuestionState } from '../reducers/number.reducer';
-import { QuestAdd, Show } from '../reducers/number.actions';
-
 import {
   faQuestion,
   faTimes,
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
-import { text } from '@fortawesome/fontawesome-svg-core';
 import {
   keyframes,
   trigger,
@@ -17,16 +13,18 @@ import {
   style,
   animate,
 } from '@angular/animations';
+import { QuestionState } from '../reducers/number.reducer';
+import { QuestAdd, Show } from '../reducers/number.actions';
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss'],
   animations: [
-    trigger('Question', [
+    trigger('Quest', [
       transition('* <=> *', [
         animate(
-          '15000ms ease',
+          '12s ease',
           keyframes([
             style({ transform: 'rotate(0deg)', offset: 0 }),
             style({ transform: 'rotate(-20deg)', offset: 0.15 }),
@@ -45,17 +43,17 @@ import {
   ],
 })
 export class QuestionComponent implements OnInit {
+  constructor(public store$: Store<QuestionState>) {}
+
   @ViewChild('minInput') minInput: ElementRef; //Получение доступа к элементу в HTML дереве
   @ViewChild('maxInput') maxInput: ElementRef;
 
-  question: IconDefinition = faQuestion;
-  close: IconDefinition = faTimes;
+  public question: IconDefinition = faQuestion;
+  public close: IconDefinition = faTimes;
 
-  min: number = 0;
-  max: number = 0;
-  random: number = 0; //Test variable
-
-  constructor(public store$: Store<QuestionState>) {}
+  public min: number = 0;
+  public max: number = 0;
+  public random: number = 0; //Test variable
 
   ngOnInit(): void {}
 

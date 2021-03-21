@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Injectable,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import {
   keyframes,
   trigger,
@@ -56,12 +62,12 @@ export class NotificationComponent implements OnInit {
   public show$: Observable<boolean> = this.store$.pipe(select(selectBool));
   public text$: Observable<string> = this.store$.pipe(select(selectText));
 
-  ngOnInit(): void {}
+  public title: string = 'Title';
+
+  ngOnInit() {}
 
   public Animate(): any {
-    this.show$.subscribe((s) => {
-      return s ? 'show ' : 'hide';
-    });
+    return this.show$ ? 'show' : 'hide';
   }
 
   public Select(): any {

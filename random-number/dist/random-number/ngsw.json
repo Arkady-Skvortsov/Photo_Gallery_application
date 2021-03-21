@@ -1,0 +1,75 @@
+{
+  "configVersion": 1,
+  "timestamp": 1616342682764,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/index.html",
+        "/main.8cb9bad07fd60b92fadf.js",
+        "/manifest.webmanifest",
+        "/polyfills.94daefd414b8355106ab.js",
+        "/runtime.7b63b9fd40098a2e8207.js",
+        "/styles.c6c11eb63903d7121994.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-48x48.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-144x144.png": "6ca051d7acfdd3fe953fac2f74d7c0442b600a52",
+    "/assets/icons/icon-192x192.png": "7fc21408dfe501be7013dad57cf7772c1e48a364",
+    "/assets/icons/icon-48x48.png": "dec186e839eab8f128a46e3adc01f0fc4f22f481",
+    "/assets/icons/icon-512x512.png": "1a9729ade4024db751cc1bc81e062c9c7ee9e98b",
+    "/assets/icons/icon-72x72.png": "241c5c70516cb779773d82a84b1f375a8ae2d095",
+    "/assets/icons/icon-96x96.png": "13d72b6f9d00e8c4eb0aba9ec3a685be9decbac4",
+    "/index.html": "6cd3702fb43cc8b5049c10e97b113e3dca5490b0",
+    "/main.8cb9bad07fd60b92fadf.js": "033fe4f7bfaa570f9a273237a3756e32d482c0e1",
+    "/manifest.webmanifest": "3e0e54f31b373fb7978040ceb5f4b0fdb3c926da",
+    "/polyfills.94daefd414b8355106ab.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
+    "/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/styles.c6c11eb63903d7121994.css": "765ff05d3bd980d5e8b38699bd3ea86489a01499"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

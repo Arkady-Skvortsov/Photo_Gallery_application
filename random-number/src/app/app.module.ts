@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,9 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { Data } from './data.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule,
+    HttpClientModule,
     StoreModule.forRoot({}, {}),
     StoreModule.forRoot(reducers, {
       metaReducers,
@@ -44,8 +49,11 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
   ],
-  providers: [],
+  providers: [HttpClientModule, BrowserAnimationsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

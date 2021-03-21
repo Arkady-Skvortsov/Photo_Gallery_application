@@ -1,50 +1,44 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { Test } from './tests.service';
 import { Check } from './check.service';
-import { TestBed } from '@angular/core/testing';
 
-describe('Testing Test class', () => {
-  let service: Test;
-  let yks: number;
+describe('Test Service Service', () => {
+  let test: Test;
 
-  const fakeServiceCheck = { check: () => true };
+  let fakeCheck = jasmine.createSpy('check').and.callThrough();
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [Test, { provide: Check, useValue: fakeServiceCheck }],
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      providers: [Test, { provide: Check }],
+      imports: [],
+      schemas: [NO_ERRORS_SCHEMA],
     });
 
-    service = TestBed.inject(Test);
-    yks = service.yksi;
-
-    //Просто новый синтаксис === service = new Test(fakeServiceCheck as Check);
+    test = TestBed.inject(Test);
   });
 
-  it('Тестирование класса на существование', () => {
-    expect(service).not.toBeFalsy();
+  it('Сущестование класса Test', () => {
+    expect(test).toBeTruthy();
   });
 
-  it('Суммирование чисел', () => {
-    let sum = service.Sum(2, 6);
+  it('Тест Check функции со Spy()', () => {
+    let result = test.check();
 
-    expect(sum).not.toEqual(9);
+    fakeCheck;
+
+    expect(result).toBe(false);
   });
 
-  it('Тест на undefined второго аргумента', () => {
-    let sum2 = service.Sum(2); //У нас же есть ? что говорит о том, что аргумент - опциональный
+  it('Тест на переменную yksi', () => {
+    expect(test.yksi).toEqual(1);
 
-    expect(sum2).toBeUndefined();
+    expect(test.yksi).toBeInstanceOf(Number);
   });
 
-  it('Тест класса Check', () => {
-    let check = service.checkValue.check();
+  it('Тест на переменную Sum', () => {
+    let fn = test.Sum(2, 16);
 
-    expect(check).toBe(true);
-  });
-
-  it('Тест на наличие переменной', () => {
-    let yks = service.yksi;
-
-    expect(yks).toBeDefined();
-    expect(yks).toBeFalsy();
+    expect(fn).not.toEqual(19);
   });
 });

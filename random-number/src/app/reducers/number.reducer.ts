@@ -9,14 +9,14 @@ export interface QuestionState {
   text: string;
 }
 
-const initialState: QuestionState = {
+export const initialState: QuestionState = {
   inputNumber: 0,
   question: 0,
   showHide: false,
   text: '',
 };
 
-//...action - копируем старое состояние (question), к примеру
+//...state - копируем старое состояние (question), к примеру
 
 export const countReducer = (state = initialState, action: Actions) => {
   switch (action.type) {

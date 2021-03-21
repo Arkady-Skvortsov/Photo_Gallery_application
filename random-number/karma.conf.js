@@ -32,16 +32,16 @@ module.exports = function (config) {
     reporters: ["progress", "kjhtml"],
     port: 9876,
     colors: true,
-    // thresholds: {
-    //   //Можем указать то, на сколько % должны быть выполнены тесты
-    //   emitWorning: false,
-    //   global: {
-    //     statements: 75,
-    //     functions: 75,
-    //     lines: 75,
-    //     branches: 75,
-    //   },
-    // },
+    thresholds: {
+      //   //Можем указать то, на сколько % должны быть выполнены тесты иначе проект просто не запуститься
+      emitWorning: false,
+      global: {
+        statements: 70,
+        functions: 70,
+        lines: 70,
+        branches: 70,
+      },
+    },
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ["Chrome"],

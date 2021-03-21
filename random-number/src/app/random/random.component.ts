@@ -40,6 +40,8 @@ import {
   ],
 })
 export class RandomComponent implements OnInit {
+  constructor(public router: Router, public store$: Store<QuestionState>) {}
+
   angle: IconDefinition = faAngleLeft;
 
   zagadannoe$: Observable<number> = this.store$.pipe(select(selectQuestion));
@@ -48,8 +50,6 @@ export class RandomComponent implements OnInit {
   numCheck: boolean = false; //Будет определять, ложное значние или истинное
 
   animCheck: boolean = false;
-
-  constructor(public router: Router, public store$: Store<QuestionState>) {}
 
   ngOnInit(): void {}
 

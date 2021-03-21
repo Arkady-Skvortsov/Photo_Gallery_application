@@ -29,9 +29,10 @@ export class InputComponent implements OnInit {
   public clear: boolean = false;
   public num: number = 0;
   public check: boolean = false;
+  public secondString: string = '';
 
   ngOnInit(): void {
-    console.log('LifeSycle hook');
+    this.secondString = 'LifeSycle hook';
   }
 
   public clearInput(): void {
