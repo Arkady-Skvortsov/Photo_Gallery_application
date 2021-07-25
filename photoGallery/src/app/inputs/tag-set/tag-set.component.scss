@@ -1,0 +1,16 @@
+@import "../../../styles.scss";
+
+.creational-tag {
+  @include formInput(3.125rem, $inputFont, 1.25rem, $w);
+  @include display(flex, none, space-between, center);
+
+  .input {
+    min-width: $inputWidth;
+    max-height: 43.75rem;
+    color: blue;
+
+    &:focus {
+      border: 1px solid green;
+    }
+  }
+}

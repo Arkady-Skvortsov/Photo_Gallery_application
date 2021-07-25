@@ -1,0 +1,153 @@
+@import "../../../styles.scss";
+
+.border-change-main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__change-form {
+    width: 62.5rem;
+    height: 48.875rem; //46.875rem
+    border-radius: $radius;
+    background: $b;
+
+    .budged-icon {
+      @include iconBlock($fontS, $fontS, 1.4rem, $w);
+      @include display($in, none, center, center);
+      position: absolute;
+      z-index: 8;
+      box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.5);
+      margin-left: 1.25rem;
+      margin-top: 1.25rem;
+
+      &__budged {
+        height: 1.875rem;
+        width: 1.875rem;
+      }
+    }
+
+    .border-form {
+      max-width: 46.875rem;
+      height: 47rem;
+      margin: 25px auto;
+      z-index: 11;
+
+      &__creational-border {
+        @include display(flex, column, space-between, center);
+        height: 30rem;
+        width: inherit;
+
+        .add-border {
+          @include iconBlock($radius, $radius, $b, $w);
+          @include display(flex, none, center, center);
+
+          &__plus {
+            height: inherit;
+            width: inherit;
+            cursor: pointer;
+            background: url("../../../assets/svg/plus-square.svg");
+
+            &::-webkit-file-upload-button {
+              visibility: hidden;
+              opacity: 0;
+            }
+          }
+        }
+
+        .upload-border {
+          height: 26rem;
+          width: $in;
+          border: 1px solid $w;
+          overflow: hidden;
+
+          &::after {
+            position: absolute;
+            content: "";
+            border-radius: 16px;
+          }
+
+          .same-image {
+            height: $in;
+            max-width: $in;
+
+            &__img {
+              height: $in;
+              width: $in;
+            }
+          }
+        }
+      }
+
+      &__options-buttons {
+        width: inherit;
+        height: $chooseHeightHalf;
+        @include display(flex, column, center, space-between);
+        margin-top: 3rem;
+
+        .settings {
+          display: flex;
+          flex-direction: row !important;
+          align-items: center;
+          justify-content: space-between;
+
+          .name,
+          .value {
+            font-size: 0.98rem;
+            font-family: $Kufi;
+            color: $w;
+          }
+
+          .progressive {
+            -webkit-appearance: none;
+            width: 25rem;
+            height: 2px;
+            outline: none;
+            border-radius: 20%;
+            @include transition(0.8s);
+
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              height: 10px;
+              width: 10px;
+              cursor: pointer;
+              background: $o;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      &__functional-buttons {
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .add-border {
+          height: 3.125rem;
+          width: 16rem;
+          cursor: pointer;
+          text-align: center;
+          background: $w;
+          font-size: $box;
+          font-family: $Kufi;
+
+          .text {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

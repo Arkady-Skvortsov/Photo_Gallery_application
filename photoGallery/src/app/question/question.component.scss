@@ -1,0 +1,100 @@
+@import "../../styles.scss";
+
+.main-question-component {
+  width: 25rem;
+  background: $b;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  position: fixed;
+
+  .items-block {
+    max-width: inherit;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    // .busket-block {
+    //   @include transition(0.8s);
+    //   border: 1px solid $w;
+    //   display: inherit;
+    //   justify-content: center;
+    //   align-items: inherit;
+
+    //   &:nth-child(1) {
+    //     margin-left: 30px;
+    //   }
+
+    //   &:nth-child(2) {
+    //     margin-right: 30px;
+    //   }
+
+    //   .icon {
+    //     height: $radius;
+    //     width: $radius;
+    //   }
+    // }
+  }
+
+  .list-with-properties {
+    margin-top: $font30;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30.625rem;
+
+    .list {
+      display: inherit;
+      width: inherit;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .prop-name,
+    .prop-content {
+      .name,
+      .content {
+        font-size: $font20;
+        font-family: $Kufi;
+        color: $w;
+      }
+    }
+
+    .prop-change {
+      @include iconBlock($font30, $font30, 0, $w);
+    }
+  }
+
+  // .count-array {
+  //   margin-top: 1rem;
+  //   margin-left: calc(25rem / 2.35);
+  //   width: inherit;
+  //   font-family: $Kufi;
+  //   font-size: $font30;
+  //   color: $w;
+  // }
+
+  .type-of-the-item {
+    @include iconBlock($chooseHeightHalf, inherit, 0, $b);
+
+    margin-top: 0.5rem;
+
+    .item-image {
+      @include iconBlock($chooseHeightHalf, $chooseHeightHalf, $font50, $w);
+      margin: auto auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: $radius;
+        width: $radius;
+      }
+    }
+  }
+}

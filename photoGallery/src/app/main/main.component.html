@@ -1,0 +1,36 @@
+<div class="w-full h-full">
+  <div class="flex justify-between align-center m-8 switch-container">
+    <div class="flex button-container">
+      <button
+        class="flex bg-black buttons justify-center items-center cursor-pointer"
+      >
+        <img src="../../assets/svg/moon.svg" class="moon" />
+      </button>
+      <button class="bg-black text-white text-4xl buttons cursor-pointer">
+        RU
+      </button>
+    </div>
+    <div class="flex input-container">
+      <input
+        class="input"
+        type="text"
+        placeholder="Ищите свои картинки по  названию/тегам"
+      />
+      <button
+        class="flex search justify-center items-center h-18 w-18 border-solid border-black cursor-pointer"
+      >
+        <img src="../../assets/svg/search.svg" class="search-icon" />
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="flex h-20 w-20 bg-black plus-block justify-center items-center cursor-pointer"
+  >
+    <img src="../../assets/svg/plus.svg" class="plus-icon" />
+  </div>
+
+  <div class="grid h-auto mt-40 mx-20 bg-black">
+    <app-media></app-media>
+  </div>
+</div>

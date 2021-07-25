@@ -1,0 +1,68 @@
+@import "../../styles.scss";
+
+.main-options-block {
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  @include display(flex, column, space-between, center);
+
+  .options-list,
+  .options-delete {
+    height: $chooseHeightHalf;
+    width: inherit;
+    background: $b;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    font-size: $font30;
+    font-family: $Kufi;
+    color: $w;
+  }
+
+  .options-list {
+    justify-content: space-between;
+
+    &__choose-count {
+      margin-left: $font30;
+
+      > span {
+        margin: 0.5rem;
+      }
+    }
+
+    .choose-buttons {
+      width: 53.1rem;
+      display: flex;
+      justify-content: space-between;
+      margin-right: $font30;
+
+      :nth-child(2) {
+        font-size: $font20;
+      }
+
+      &__buttons {
+        background: $w;
+        color: $b;
+        height: 4.4rem;
+        width: 15.6rem;
+      }
+    }
+  }
+
+  .options-delete {
+    justify-content: center;
+
+    .busket-block {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      background: red;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

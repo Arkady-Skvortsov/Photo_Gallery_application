@@ -1,0 +1,32 @@
+@import "../../styles.scss";
+
+.main-block {
+  @include transition(0.8s);
+  cursor: pointer;
+  z-index: -1;
+
+  // &:hover {
+  //   transform: scale(0.8);
+  // }
+}
+
+.options-block {
+  width: 15.8rem;
+  height: 2.625rem;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.length-poster {
+  display: none;
+}
+
+.checker-block {
+  height: 2rem;
+  width: 2rem;
+  border: 2px solid $w;
+  margin: 0.625rem;
+  z-index: 4;
+}

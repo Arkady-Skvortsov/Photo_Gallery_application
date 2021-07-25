@@ -1,0 +1,50 @@
+@import "../../../styles.scss";
+
+.choose-filter-block {
+  width: 18.75rem;
+  background: none;
+  position: absolute;
+  z-index: 4;
+  height: 25rem;
+
+  .choose-naming {
+    @include display(flex, none, space-around, center);
+    height: 2.5rem;
+    width: $in;
+    background: $b;
+
+    .choose-txt {
+      &__text {
+        @include font($box);
+        color: $w;
+      }
+    }
+
+    .filter-down {
+      @include iconBlock($font30, $font30, 100px, $w);
+      border: 0;
+      @include display(inherit, none, center, inherit);
+    }
+  }
+
+  .choose-options {
+    width: 18.75rem;
+    @include display(inherit, none, center, center);
+    border: 1px solid $w;
+
+    .choose-options-block {
+      height: 2.5rem; //2.5rem
+      width: 18.75rem;
+      width: $in;
+      border: 1px solid $w;
+      background: $b;
+      cursor: pointer;
+      @include display(flex, none, center, center);
+
+      &__text {
+        @include font($font20);
+        color: $w;
+      }
+    }
+  }
+}

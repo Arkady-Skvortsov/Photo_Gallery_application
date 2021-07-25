@@ -1,0 +1,7 @@
+@import "../../../styles.scss";
+
+.theme-button {
+  @include transition(0.8s);
+  @include iconBlock($chooseIconBlock, $chooseIconBlock, none, $b);
+  @include display(flex, none, center, center);
+}

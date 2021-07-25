@@ -1,0 +1,90 @@
+@import "../../../styles.scss";
+
+.creational-emojies {
+  @include formInput($font50, $inputWidth, 1.25rem, $w); //6.25rem
+  @include display(flex, column, center, space-between);
+
+  .emojies-input {
+    height: $in;
+    width: $inputWidth;
+    @include display(flex, none, space-between, center);
+
+    .emojie-chips {
+      margin-left: 15px;
+      height: 2.5rem;
+      max-width: 9.375rem;
+      overflow: hidden;
+      background: $b;
+      @include display($in, $in, center, $in);
+      @include transition(0.8s);
+      border-radius: $font30;
+
+      &:hover {
+        transform: scale(0.8);
+      }
+
+      .emojie-delete-content {
+        @include iconBlock($in, $in, $in, $in);
+        @include display(flex, none, space-between, center);
+
+        .own-emojie {
+          height: $font30;
+          width: $font30;
+          @include display(flex, none, center, center);
+
+          &__icon {
+            fill: $w;
+            height: $in;
+            width: $in;
+          }
+        }
+
+        .delete-chips {
+          height: $font30;
+          width: $font30;
+          @include display(flex, none, center, center);
+
+          &__icon {
+            fill: $w;
+            height: $inputFont; //1.25rem
+            width: $inputFont;
+          }
+        }
+      }
+    }
+
+    .emojie-input {
+      @include iconBlock($in, $chooseHeightHalf, 0, none);
+      border: none;
+
+      &__input {
+        height: $inputFont;
+        width: $inputFont;
+      }
+    }
+  }
+
+  .emojies-container-block {
+    position: absolute;
+    z-index: 5;
+    margin-top: $chooseHeightHalf;
+
+    &__emojies-container {
+      min-width: $inputWidth;
+      min-height: $font50;
+      border: 1px solid $b;
+      background: $b;
+      @include display(flex, none, space-evenly, center);
+
+      .emojies-block {
+        @include iconBlock(2.5rem, 2.5rem, 0, none);
+        @include display(flex, none, center, center);
+        @include transition(0.7s);
+
+        &:hover {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../../styles.scss";
+
+.creational-border {
+  @include formInput(3.125rem, $inputFont, 1.25rem, $w);
+  @include display(flex, none, space-between, center);
+
+  .input {
+    width: $inputWidth;
+    max-height: 3.125rem;
+    border: 0;
+
+    &:focus {
+      border: 1px solid green;
+    }
+  }
+}

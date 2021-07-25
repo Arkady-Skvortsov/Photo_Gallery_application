@@ -1,0 +1,137 @@
+@import "../../../styles.scss";
+
+$full_img: 110%;
+
+.creational-image {
+  @include formInput(3.125rem, $inputFont, 1.25rem, $w);
+  width: $inputBlockWidth;
+  border: 1px solid $b;
+  position: fixed;
+  z-index: 3;
+  overflow: hidden;
+  @include display(flex, column, space-between, center); //column
+
+  .set-image-basics {
+    height: $in; //26rem;
+    width: $in;
+    overflow: hidden;
+    @include display($in, row, space-around, $in);
+
+    .rotate-image,
+    .down-image {
+      margin: 10px;
+    }
+
+    .rotate-image,
+    .down-image {
+      height: $fontS;
+      width: $fontS;
+      z-index: 6;
+      @include display(flex, none, center, center);
+      border: 2px solid $b;
+      cursor: pointer;
+    }
+
+    .add-image {
+      width: 18.75rem;
+      height: 1.5rem;
+      margin-top: $box;
+
+      &::-webkit-file-upload-button {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &::before {
+        content: "Выбрать фото";
+        background: linear-gradient(top, #f9f9f9, #e3e3e3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $in;
+        max-height: $in;
+        outline: none;
+        margin-right: 40px !important;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        @include font(0.9rem);
+      }
+
+      &:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+      }
+    }
+
+    .image-viewer {
+      width: $in;
+      max-height: $in;
+      overflow: hidden;
+
+      .image {
+        height: $full_img;
+        width: $full_img;
+        isolation: isolate;
+      }
+    }
+  }
+
+  .photo-filters {
+    height: 8.5rem;
+    width: $in;
+    @include display(flex, column, space-around, center);
+    background: $b;
+
+    .settings {
+      width: $in;
+      @include display(flex, row, space-between, center);
+    }
+
+    .name,
+    .value {
+      font-size: 0.98rem;
+      font-family: $Kufi;
+      color: $w;
+    }
+
+    .progressive {
+      -webkit-appearance: none;
+      width: 25rem;
+      height: 2px;
+      outline: none;
+      border-radius: 20%;
+      @include transition(0.8s);
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 10px;
+        width: 10px;
+        cursor: pointer;
+        background: $o;
+        border-radius: 50%;
+      }
+    }
+
+    .buttons-settings {
+      @include display($in, row, space-evenly, $in);
+
+      &__blend-mode {
+        @include iconBlock($box, $chooseIconBlock, 0, $w);
+        font-size: $inputFont;
+      }
+    }
+  }
+}
+
+.go-down-main-block {
+  height: 34rem;
+}
+
+.go-down-set-block {
+  height: 26rem;
+}
+
+.fixed {
+  display: none;
+}

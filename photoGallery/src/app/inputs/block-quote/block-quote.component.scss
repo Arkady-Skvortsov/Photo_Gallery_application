@@ -1,0 +1,21 @@
+@import "../../../styles.scss";
+
+.creational-decoration {
+  height: $chooseHeightHalf;
+  margin-top: 1.25rem;
+  width: 46.875rem;
+
+  .add-decoration {
+    height: inherit;
+    width: inherit;
+    resize: none;
+    font-size: $inputFont;
+  }
+
+  .decoration-length {
+    position: absolute;
+    font-weight: bold;
+    margin-left: 43rem;
+    margin-top: 70px;
+  }
+}

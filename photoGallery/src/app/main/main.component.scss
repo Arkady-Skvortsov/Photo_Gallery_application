@@ -1,0 +1,57 @@
+@import "../../styles.scss";
+
+.moon,
+.search-icon {
+  height: 45px;
+  width: 45px;
+}
+
+.plus-icon {
+  height: 55px;
+  width: 55px;
+}
+
+.switch-container {
+  height: 75px;
+  font-family: $Kufi;
+
+  .button-container {
+    min-width: 170px;
+
+    .buttons {
+      height: inherit;
+      width: 75px;
+
+      &:nth-child(2) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .input-container {
+    min-width: 1110px;
+    justify-content: space-between;
+
+    .input {
+      width: 1000px;
+      height: 75px;
+      border: 1px solid $b;
+      font-family: $Kufi;
+      font-size: 35px;
+    }
+
+    .search {
+      height: 75px;
+      width: 75px;
+      border: 1px solid $b;
+    }
+  }
+}
+
+.plus-block {
+  border-radius: 2.8rem;
+  cursor: pointer;
+  position: absolute;
+  top: 9rem;
+  left: 50%;
+}

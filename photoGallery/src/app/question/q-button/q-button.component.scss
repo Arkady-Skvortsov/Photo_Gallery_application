@@ -1,0 +1,12 @@
+@import "../../../styles.scss";
+
+.question-button {
+  @include iconBlock($chooseIconBlock, $chooseIconBlock, $radius, $b);
+  @include display(flex, none, center, center);
+  border: 2px solid $w;
+
+  .quest-image {
+    height: inherit;
+    width: inherit;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../styles.scss";
+
+.language-button {
+  @include transition(0.8s);
+  @include iconBlock($chooseIconBlock, $chooseIconBlock, none, $b);
+  color: $w;
+  font-family: $Kufi;
+  font-size: $radius;
+}

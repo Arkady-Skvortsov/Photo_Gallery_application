@@ -1,0 +1,23 @@
+@import "../../styles.scss";
+
+.main-choose-container {
+  min-height: 100vh;
+  position: fixed;
+  display: flex; //flex - later is ngRx property
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  left: 0;
+  align-items: center;
+  z-index: 10;
+  align-content: center;
+}
+
+.block-with-choose {
+  border: 2px solid $w;
+  background: $b;
+  height: 12.5rem;
+  width: 45.3rem;
+  margin: auto;
+  overflow: hidden;
+}

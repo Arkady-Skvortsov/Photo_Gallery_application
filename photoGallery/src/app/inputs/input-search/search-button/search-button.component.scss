@@ -1,0 +1,7 @@
+@import "../../../../styles.scss";
+
+.search-button {
+  @include display(flex, none, center, center);
+  @include transition(0.8s);
+  @include iconBlock($chooseIconBlock, $chooseIconBlock, none, $b);
+}

@@ -1,0 +1,29 @@
+@import "../../../styles.scss";
+
+.lang-block {
+  border: 2px solid $w;
+  cursor: pointer;
+  width: 37.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $chooseHeightHalf;
+  @include transition(1s);
+
+  &:hover {
+    opacity: 0.7;
+
+    .lang-name,
+    .lang-short {
+      color: $b;
+    }
+  }
+
+  .lang-name,
+  .lang-short {
+    font-size: $fontS;
+    font-family: $Kufi;
+    color: $w;
+    margin: 1.875rem;
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../../styles.scss";
+
+.choose-blocks {
+  margin: 0;
+  cursor: pointer;
+  height: $chooseHeightHalf;
+  width: inherit;
+  @include display(flex, row, none, center);
+  @include transition(0.8s);
+
+  &:hover {
+    background: $w;
+
+    .block-name {
+      color: $b;
+    }
+  }
+  //fix later
+  .icon-block {
+    // height: calc(12.5rem / 2);
+    height: 12.5rem;
+    //margin-left: $radius;
+    background: $r;
+    border-radius: $radius;
+    align-items: center;
+    width: inherit;
+    z-index: 99;
+
+    .icon {
+      fill: white;
+    }
+  }
+
+  .block-name {
+    margin: auto;
+    color: $w;
+    font-size: $fontS;
+  }
+}

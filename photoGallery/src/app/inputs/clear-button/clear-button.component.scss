@@ -1,0 +1,11 @@
+@import "../../../styles.scss";
+
+.clear-button,
+.add-button {
+  // @include iconBlock($box, $box, 0.9rem, $b);
+
+  height: $box;
+  width: $box;
+  border-radius: 0.9rem;
+  background: $b;
+}

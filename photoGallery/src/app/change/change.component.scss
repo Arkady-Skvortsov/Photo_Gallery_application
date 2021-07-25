@@ -1,0 +1,108 @@
+@import "../../styles.scss";
+
+.change-main-block {
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  position: fixed;
+  display: flex; //flex
+  justify-content: center;
+  align-items: center;
+
+  // &__header {
+  //   font-size: $font30;
+  //   font-family: $Kufi;
+  //   color: $b;
+  //   margin: auto auto;
+  // }
+
+  .change-children-block {
+    height: 37.5rem; //43.75rem
+    width: 62.5rem;
+    border: 1px solid $b;
+    background: $b;
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .change-list-of-creterias {
+      display: inherit;
+      justify-content: space-between;
+      align-items: center;
+      margin: $font50;
+      cursor: pointer;
+      background: $w;
+      height: 2.18rem; //2.18rem
+      max-width: inherit;
+
+      &__txt {
+        @include font($font20);
+        margin-left: 0.938rem;
+      }
+
+      .arrow-down {
+        @include iconBlock($box, $box, 0, $w);
+        @include display(flex, none, center, center);
+        margin-right: 0.938rem;
+      }
+    }
+
+    .createrias-list {
+      min-height: 100%; // 100%
+      max-width: inherit;
+      margin: $font50;
+      margin-top: -$font50;
+
+      .change-item {
+        background: $w;
+        cursor: pointer;
+        @include display(flex, row, center, center);
+        width: inherit;
+        height: inherit;
+        @include transition(0.8s);
+
+        &:hover {
+          background: $b;
+          color: $w;
+        }
+
+        &__txt {
+          @include font($font20);
+        }
+      }
+    }
+
+    .change-createrias-render {
+      @include display(flex, none, center, center);
+      width: inherit;
+
+      .alert-text {
+        color: $w;
+        @include font($font20);
+      }
+    }
+
+    .change-button {
+      background: $w;
+      cursor: pointer;
+      width: 18.75rem;
+      height: $font50;
+      margin: auto;
+      @include display(flex, none, center, center);
+
+      span {
+        @include font($font20);
+      }
+    }
+  }
+}
+
+.hide {
+  display: none; //later will be an angular-animations => 💩💩💩💩💩💩
+}
+
+.hideList {
+  display: none;
+}

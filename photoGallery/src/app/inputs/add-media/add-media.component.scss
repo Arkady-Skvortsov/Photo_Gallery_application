@@ -1,0 +1,8 @@
+@import "../../../styles.scss";
+
+.add-media {
+  @include transition(0.8s);
+  @include display(flex, none, center, center);
+  @include iconBlock($chooseIconBlock, $chooseIconBlock, $radius, $b);
+  cursor: pointer;
+}
